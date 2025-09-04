@@ -45,7 +45,11 @@ def exe2(q, a, b, c):
 
     @always_comb
     def comb():
+<<<<<<< HEAD
         q.next = (not (b or c)) or b and c 
+=======
+        q.next = (not (b or c)) or b and c
+>>>>>>> f2a95fbff65b9d5dc3487ada400c09ddf80590a8
 
     return instances()
 
@@ -73,7 +77,11 @@ def exe3(q, a, b, c, d, e):
 
     @always_comb
     def comb():
+<<<<<<< HEAD
         q.next = (a or b) and c and d and e
+=======
+        q.next = (a or b) and c and d and e 
+>>>>>>> f2a95fbff65b9d5dc3487ada400c09ddf80590a8
 
     return instances()
 
@@ -103,6 +111,7 @@ def exe5(leds, sw):
 
     @always_comb
     def comb():
+<<<<<<< HEAD
         leds[0].next = sw[0]
         leds[1].next = sw[0] and sw[1]
         leds[2].next = (not leds[1])
@@ -115,6 +124,18 @@ def exe5(leds, sw):
         leds[9].next = 1
         pass
 
+=======
+        led[0] = sw[0]
+        led[1] = sw[0] and sw[1]
+        led[2] = (not led[1])
+        led[3] =  sw[0]^sw[1]
+        led[4] = 1
+        led[5] = 1
+        led[6] = 1
+        led[7] = 1
+        led[8] = 1 
+        led[9] = 1
+>>>>>>> f2a95fbff65b9d5dc3487ada400c09ddf80590a8
     return instances()
 
 
